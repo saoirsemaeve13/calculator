@@ -5,7 +5,7 @@
 
 .calculatorBody {
   width: 400px;
-  height: 525px;
+  height: 550px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@
 .calculatorOperators {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 75px;
 }
 
