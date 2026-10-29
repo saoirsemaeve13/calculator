@@ -50,6 +50,18 @@
   flex: 0 1 75px;
 }
 
+#delete {
+  height: 75px;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex: 0 1 75px;
+}
+
 .calculatorOperators {
   display: flex;
   flex-direction: column;
@@ -58,6 +70,17 @@
 }
 
 .operatorButtons {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 8px;
+}
+
+#equals,
+#allClear {
   border: 2px solid black;
   border-radius: 8px;
   padding: 5px;

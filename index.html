@@ -11,21 +11,23 @@
   <div class="header"></div>
   <div class="mainContent">
     <div class="calculatorBody">
-      <div class="calculatorScreen">Testing 123</div>
+      <div class="calculatorScreen">
+        <p id="display">867 5309</p>
+      </div>
       <div class="calculatorButtons">
         <div class="calculatorNumbers">
-          <button class="numberButtons" id="nine">9</button>
-          <button class="numberButtons" id="eight">8</button>
-          <button class="numberButtons" id="seven">7</button>
-          <button class="numberButtons" id="six">6</button>
-          <button class="numberButtons" id="five">5</button>
-          <button class="numberButtons" id="four">4</button>
-          <button class="numberButtons" id="three">3</button>
-          <button class="numberButtons" id="two">2</button>
-          <button class="numberButtons" id="one">1</button>
-          <button class="numberButtons" id="delete">del</button>
-          <button class="numberButtons" id="zero">0</button>
-          <button class="numberButtons" id="decimal">.</button>
+          <button class="numberButtons" id="nine" data-text="9">9</button>
+          <button class="numberButtons" id="eight" data-text="8">8</button>
+          <button class="numberButtons" id="seven" data-text="7">7</button>
+          <button class="numberButtons" id="six" data-text="6">6</button>
+          <button class="numberButtons" id="five" data-text="5">5</button>
+          <button class="numberButtons" id="four" data-text="4">4</button>
+          <button class="numberButtons" id="three" data-text="3">3</button>
+          <button class="numberButtons" id="two" data-text="2">2</button>
+          <button class="numberButtons" id="one" data-text="1">1</button>
+          <button id="delete">del</button>
+          <button class="numberButtons" id="zero" data-text="0">0</button>
+          <button class="numberButtons" id="decimal" data-text=".">.</button>
         </div>
         <div class="calculatorOperators">
           <button class="operatorButtons" id="addition">+</button>
@@ -34,8 +36,8 @@
           <button class="operatorButtons" id="division">/</button>
           <button class="operatorButtons" id="exponent">^</button>
           <button class="operatorButtons" id="factorial">!</button>
-          <button class="operatorButtons" id="equals">=</button>
-          <button class="operatorButtons" id="allClear">AC</button>
+          <button id="equals">=</button>
+          <button id="allClear">AC</button>
         </div>
       </div>
     </div>
