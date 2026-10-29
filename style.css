@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.calculatorBody {
+  width: 400px;
+  height: 525px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.calculatorScreen {
+  height: 75px;
+  width: 360px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculatorButtons {
+  display: flex;
+  width: 360px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.calculatorNumbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.numberButtons {
+  height: 75px;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex: 0 1 75px;
+}
+
+.calculatorOperators {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75px;
+}
+
+.operatorButtons {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 8px;
+}
