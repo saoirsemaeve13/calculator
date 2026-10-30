@@ -43,6 +43,9 @@ back.addEventListener("click", (e) => {
 const allClear = document.getElementById("allClear");
 allClear.addEventListener("click", (e) => {
   display.textContent = "";
+  num1 = "";
+  num2 = "";
+  operator = "";
 });
 
 let num1 = "";
@@ -53,7 +56,8 @@ const operatorButton = document.querySelectorAll(".operatorButtons");
 operatorButton.forEach((button) => {
   button.addEventListener("click", (e) => {
     operator = e.target.id;
-    num1 = display.textContent;
+    num1 = "";
+    num2 = display.textContent;
     console.log(`operator contains: ${operator}. num1 contains: ${num1}.`);
     display.textContent = "";
   });
@@ -62,32 +66,37 @@ operatorButton.forEach((button) => {
 function operate() {
   switch (operator) {
     case "addition":
-      addition(num1, display.textContent);
+      addition(num2, num1);
       break;
 
     case "subtraction":
-      subtraction(num1, display.textContent);
+      subtraction(num2, num1);
       break;
 
     case "multiplication":
-      multiplication(num1, display.textContent);
+      multiplication(num2, num1);
       break;
 
     case "division":
-      division(num1, display.textContent);
+      division(num2, num1);
       break;
 
     case "exponent":
-      exponent(num1, display.textContent);
+      exponent(num2, num1);
       break;
 
     case "factorial":
-      factorial(num1);
+      factorial(num2);
       break;
   }
 }
 
 const equals = document.getElementById("equals");
 equals.addEventListener("click", (e) => {
+  if (num1 === "") {
+    num1 = display.textContent;
+  }
+  console.log(`num1 = ${num1} and num2 = ${num2}`);
   operate();
+  num2 = display.textContent;
 });
