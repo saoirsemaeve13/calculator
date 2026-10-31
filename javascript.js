@@ -1,21 +1,26 @@
 function addition(num1, num2) {
-  display.textContent = +num1 + +num2;
+  let result = +num1 + +num2;
+  display.textContent = parseFloat(result.toFixed(10));
 }
 
 function subtraction(num1, num2) {
-  display.textContent = +num1 - +num2;
+  let result = +num1 - +num2;
+  display.textContent = parseFloat(result.toFixed(10));
 }
 
 function multiplication(num1, num2) {
-  display.textContent = +num1 * +num2;
+  let result = +num1 * +num2;
+  display.textContent = parseFloat(result.toFixed(10));
 }
 
 function division(num1, num2) {
-  display.textContent = +num1 / +num2;
+  let result = +num1 / +num2;
+  display.textContent = parseFloat(result.toFixed(10));
 }
 
 function exponent(num1, num2) {
-  display.textContent = num1 ** num2;
+  let result = num1 ** num2;
+  display.textContent = parseFloat(result.toFixed(10));
 }
 
 function factorial(num1) {
@@ -31,12 +36,12 @@ const display = document.getElementById("display");
 numbers.forEach((button) => {
   button.addEventListener("click", (e) => {
     const append = e.target.dataset.text;
-    if (append === "." && display.textContent.includes(".")) {
-      return;
-    }
     if (shouldResetDisplay) {
       display.textContent = "";
       shouldResetDisplay = false;
+    }
+    if (append === "." && display.textContent.includes(".")) {
+      return;
     }
     display.textContent += append;
   });
