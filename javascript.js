@@ -30,11 +30,14 @@ const numbers = document.querySelectorAll(".numberButtons");
 const display = document.getElementById("display");
 numbers.forEach((button) => {
   button.addEventListener("click", (e) => {
+    const append = e.target.dataset.text;
+    if (append === "." && display.textContent.includes(".")) {
+      return;
+    }
     if (shouldResetDisplay) {
       display.textContent = "";
       shouldResetDisplay = false;
     }
-    const append = e.target.dataset.text;
     display.textContent += append;
   });
 });
@@ -59,10 +62,11 @@ operator = "";
 const operatorButton = document.querySelectorAll(".operatorButtons");
 operatorButton.forEach((button) => {
   button.addEventListener("click", (e) => {
-    if (operator === "") {
+    if (operator === "" || shouldResetDisplay) {
       operator = e.target.id;
       num1 = "";
       num2 = display.textContent;
+      shouldResetDisplay = false;
       console.log(`operator contains: ${operator}. num1 contains: ${num1}.`);
       display.textContent = "";
     } else {
@@ -116,6 +120,5 @@ function compute() {
   console.log(`num1 = ${num1} and num2 = ${num2}`);
   operate();
   num2 = display.textContent;
-  operator = "";
   shouldResetDisplay = true;
 }
